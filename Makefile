@@ -1,5 +1,5 @@
 commonWealth: main.o World.o Colony.o Person.o
-	g++ main.o World.o Colony.o Person.o -o commonWealth
+	g++ main.o World.o Colony.o Person.o -Wall -o commonWealth
 
 main.o: main.cpp World.h
 	g++ -g -std=c++11 -c main.cpp

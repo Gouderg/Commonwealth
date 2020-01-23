@@ -1,4 +1,4 @@
-#ifdef COLONY_H
+#ifndef COLONY_H
 #define COLONY_H
 
 class Colony {
