@@ -1,15 +1,11 @@
 #include "World.h"
 
-
 int main(int argc, char const *argv[])
 {
 
+	World world("img/map.txt");
 
-	World world;
-
-	world.createWorld();
-
-	world.affiche();
+	cout << world;
 	
 
 

@@ -1,17 +1,22 @@
+CFLAGS = -g -Wall -std=c++11
+
+
 commonWealth: main.o World.o Colony.o Person.o
-	g++ main.o World.o Colony.o Person.o -Wall -o commonWealth
+	g++ $(CFLAGS) main.o World.o Colony.o Person.o -o commonWealth
 
 main.o: main.cpp World.h
-	g++ -g -std=c++11 -c main.cpp
+	g++ $(CFLAGS) -c main.cpp
 
 World.o: World.cpp World.h
-	g++ -g -std=c++11 -c World.cpp
+	g++ $(CFLAGS) -c World.cpp
 
 Colony.o: Colony.cpp Colony.h
-	g++ -g -std=c++11 -c Colony.cpp
+	g++ $(CFLAGS) -c Colony.cpp
 
 Person.o: Person.cpp Person.h
-	g++ -g -std=c++11 -c Person.cpp
+	g++ $(CFLAGS) -c Person.cpp
 
 clean:
 	rm *.o commonWealth
+
+remake: clean commonWealth
